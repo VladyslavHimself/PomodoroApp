@@ -2,5 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<h1>Empty project</h1>,document.getElementById('root'));
+import './index.scss';
+import App from './components/App/App';
+
+
+ReactDOM.render(<App />,document.getElementById('root'));
 reportWebVitals();
