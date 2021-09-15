@@ -9,7 +9,7 @@ import {Statistics} from '../Statistics/Statistics';
 const App = () => (
   <Router>
     <Switch>
-      <Route exact path='/' component={Login} />
+      <Route exact path='/' component={Pomodoro} />
       <Route path='/login' component={Login} />
       <Route path='/register' component={Register} />
       <Route path='/pomodoro' component={Pomodoro} />

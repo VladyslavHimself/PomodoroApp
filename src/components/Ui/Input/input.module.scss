@@ -14,7 +14,7 @@
   &::placeholder {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 132.9%;
     letter-spacing: 0.055em;
   }
@@ -22,5 +22,10 @@
   &:focus {
     outline: none;
     background: rgba(149, 149, 149, 0.29);
+
+    &::placeholder {
+      font-size: 14px;
+      transition: .3s ease;
+    }
   }
 }
