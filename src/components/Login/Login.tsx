@@ -4,6 +4,8 @@ import Header from "../Ui/Header/Header";
 import {Input} from "../Ui/Input/Input";
 import Button from "../Ui/Button/Button";
 
+import {Link} from "react-router-dom";
+
 function Login() {
   return (
     <div className={classes.login}>
@@ -15,7 +17,7 @@ function Login() {
         </div>
         <div className={classes.buttons}>
           <Button value={'LogIn'}/>
-          <a href='/' className={classes['register-link']}>Register</a>
+          <Link to='/register' className={classes['register-link']}>Register</Link>
         </div>
       </div>
     </div>

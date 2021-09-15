@@ -1,0 +1,56 @@
+// quicksand medium & regular
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+.register {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f4f4f4;
+
+  cursor: default;
+}
+
+.form {}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+// register link
+.register-link {
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+
+  font-family: Quicksand, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.055em;
+
+}
+
+
+
