@@ -1,5 +1,5 @@
 // quicksand medium & regular
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
 .login {
   width: 100%;
@@ -10,6 +10,8 @@
   align-items: center;
 
   background: #f4f4f4;
+
+  cursor: default;
 }
 
 .form {
@@ -18,12 +20,10 @@
 
 .header {
   .logo {
-
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: 27px 10px;
     &__text {
       font-family: 'Quicksand', sans-serif;
       font-style: normal;
@@ -82,13 +82,56 @@
 
 .buttons {
 
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
+  width: 150px;
+  height: 50px;
+  background: #E86C6C;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 50px;
+
+  color: #f4f4f4;
+
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.055em;
+
+  cursor: pointer;
+
+  transition: .7s ease;
+
+  &:hover {
+    background: #cd6060;
+  }
 
 }
 
 .register-link {
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+
+  font-family: Quicksand, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.055em;
 
 }
 

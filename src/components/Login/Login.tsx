@@ -18,7 +18,7 @@ function Login(props: Props) {
 
         <div className={classes['input-field']}>
           <input type='text' className={classes.input} placeholder='E-mail'/>
-          <input type='text' className={classes.input} placeholder='Password' />
+          <input type='password' className={classes.input} placeholder='Password' />
         </div>
 
         <div className={classes.buttons}>
