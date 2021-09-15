@@ -11,7 +11,7 @@ function Login(props: Props) {
       <div className={classes.form}>
         <div className={classes.header}>
           <div className={classes.logo}>
-            <div className={classes['logo__text']}>Login</div>
+            <div className={classes['logo__text']}>LogIn</div>
             <hr className={classes['logo__underline']}/>
           </div>
         </div>
