@@ -2,4 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &::selection {
+    background: rgba(255, 93, 93, 0.39);
+  }
 }

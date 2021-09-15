@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 132.9%;
+    letter-spacing: 0.055em;
+  }
+
+  &__underline {
+    width: 170px;
+    height: 5px;
+    background: #F23D3D;
+    border-radius: 50px;
+    border: none;
+  }
+}

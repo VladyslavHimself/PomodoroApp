@@ -14,71 +14,12 @@
   cursor: default;
 }
 
-.form {
-
-}
-
-.header {
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__text {
-      font-family: 'Quicksand', sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 132.9%;
-      letter-spacing: 0.055em;
-    }
-
-    &__underline {
-      width: 170px;
-      height: 5px;
-      background: #F23D3D;
-      border-radius: 50px;
-      border: none;
-    }
-  }
-
-}
-
+.form {}
 
 .input-field {
-
   display: flex;
   flex-direction: column;
-
-  .input {
-    width: 350px;
-    height: 50px;
-
-    padding-left: 20px;
-    margin-top: 20px;
-
-    background: rgba(204, 204, 204, 0.29);
-    border: none;
-    border-radius: 50px;
-
-    transition: .7s ease;
-
-    &::placeholder {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 132.9%;
-      letter-spacing: 0.055em;
-    }
-
-    &:focus {
-      outline: none;
-      background: rgba(149, 149, 149, 0.29);
-    }
-  }
 }
-
-
 
 .buttons {
 
@@ -89,32 +30,8 @@
   align-items: center;
 }
 
-.button {
-  width: 150px;
-  height: 50px;
-  background: #E86C6C;
 
-  text-align: center;
-
-  border: none;
-  border-radius: 50px;
-
-  color: #f4f4f4;
-
-  font-size: 24px;
-  line-height: 30px;
-  letter-spacing: 0.055em;
-
-  cursor: pointer;
-
-  transition: .7s ease;
-
-  &:hover {
-    background: #cd6060;
-  }
-
-}
-
+// register link
 .register-link {
 
   display: flex;

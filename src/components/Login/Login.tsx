@@ -1,28 +1,20 @@
 import React from 'react';
 import classes from "./login.module.scss";
+import Header from "../Ui/Header/Header";
+import {Input} from "../Ui/Input/Input";
+import Button from "../Ui/Button/Button";
 
-type Props = {
-
-}
-
-function Login(props: Props) {
+function Login() {
   return (
     <div className={classes.login}>
       <div className={classes.form}>
-        <div className={classes.header}>
-          <div className={classes.logo}>
-            <div className={classes['logo__text']}>LogIn</div>
-            <hr className={classes['logo__underline']}/>
-          </div>
-        </div>
-
+        <Header title='LogIn'/>
         <div className={classes['input-field']}>
-          <input type='text' className={classes.input} placeholder='E-mail'/>
-          <input type='password' className={classes.input} placeholder='Password' />
+          <Input inputType={'text'} placeholder={'E-mail'}/>
+          <Input inputType={'password'} placeholder={'Password'}/>
         </div>
-
         <div className={classes.buttons}>
-          <button className={classes.button}>Login</button>
+          <Button value={'LogIn'}/>
           <a href='/' className={classes['register-link']}>Register</a>
         </div>
       </div>

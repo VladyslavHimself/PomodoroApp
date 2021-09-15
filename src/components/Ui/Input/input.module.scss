@@ -1,0 +1,26 @@
+.input {
+  width: 350px;
+  height: 50px;
+
+  padding-left: 20px;
+  margin-top: 20px;
+
+  background: rgba(204, 204, 204, 0.29);
+  border: none;
+  border-radius: 50px;
+
+  transition: .7s ease;
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 132.9%;
+    letter-spacing: 0.055em;
+  }
+
+  &:focus {
+    outline: none;
+    background: rgba(149, 149, 149, 0.29);
+  }
+}
