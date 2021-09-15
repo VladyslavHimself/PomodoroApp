@@ -20,3 +20,23 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 32px;
 }
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  //background: #E86C6C;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  img {
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+  }
+}
