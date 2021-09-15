@@ -3,4 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './components/App/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const application : JSX.Element = (
+  <App />
+);
+
+ReactDOM.render(application, document.getElementById('root'));
