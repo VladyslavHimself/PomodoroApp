@@ -2,12 +2,13 @@ import React from 'react';
 import classes from './Button.module.scss';
 
 type Props = {
-  value: string
+  value: string,
+  loginHandle?: any
 }
 
 function Button(props: Props) {
   return (
-    <button className={classes.button}>{props.value}</button>
+    <button className={classes.button} onClick={props.loginHandle}>{props.value}</button>
   );
 }
 

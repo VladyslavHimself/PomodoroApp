@@ -5,9 +5,7 @@ import Header from "../Ui/Header/Header";
 import {Input} from "../Ui/Input/Input";
 import Button from "../Ui/Button/Button";
 
-type Props = {
-
-}
+type Props = {};
 
 export const Register = (props: Props) => {
   return (
