@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import classes from './app.module.scss';
-import Login from "../Login/Login";
+import {Login} from "../Login/Login";
 import {Register} from "../Register/Register";
 import {Pomodoro} from "../Pomodoro/Pomodoro";
 import {Statistics} from '../Statistics/Statistics';
@@ -11,7 +10,6 @@ const App = () => {
 
   const isUserAuthorized = !!localStorage.getItem('user');
 
-  console.log(isUserAuthorized);
   if (isUserAuthorized) {
     return (
       <Router>
@@ -35,7 +33,6 @@ const App = () => {
       </Router>
     )
   }
-
 };
 
 export default App;

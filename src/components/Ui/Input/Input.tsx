@@ -1,7 +1,5 @@
 import * as React from 'react';
 import classes from "./input.module.scss";
-import {useState} from "react";
-import firebase from "firebase/compat";
 
 type Props = {
   inputType: string,

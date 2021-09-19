@@ -20,10 +20,10 @@ export const Register = (props: Props) => {
 
   const history = useHistory();
 
-  const getResponseFromServer = async () => {
+  const getResponseFromServer = async (apiKey: string) => {
 
     try {
-      return await axios.post(signUpKey, {
+      return await axios.post(apiKey, {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true,
@@ -40,7 +40,7 @@ export const Register = (props: Props) => {
   }
 
   const registerHandler = async () => {
-    const response = await getResponseFromServer();
+    const response = await getResponseFromServer(signUpKey);
 
     if (response === 400) {
       alert('Something went wrong!');
