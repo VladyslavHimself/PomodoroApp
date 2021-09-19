@@ -5,7 +5,7 @@ import {Input} from "../Ui/Input/Input";
 import {Button} from "../Ui/Button/Button";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import {apiKey} from "../../firebase-rest";
+import {signInKey} from "../../firebase-rest";
 import {IAuth} from "../../interfaces";
 import { useHistory } from 'react-router-dom';
 
@@ -21,12 +21,10 @@ function Login() {
 
   const history = useHistory();
 
-
-
   const getResponseFromServer = async () => {
 
     try {
-      return await axios.post(apiKey, {
+      return await axios.post(signInKey, {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true,
@@ -49,12 +47,9 @@ function Login() {
       alert('Invalid login, or password');
     } else if (response.status === 200) {
       addUserToLocalStorage(authData.email);
-      console.log(localStorage.getItem('user'));
       location.replace('/pomodoro');
     }
   }
-
-
 
   return (
     <div className={classes.login}>
@@ -65,7 +60,7 @@ function Login() {
           <Input authType='password' inputType={'password'} placeholder={'Password'} inputData={authData} changeInputData={setAuthData}/>
         </div>
         <div className={classes.buttons}>
-          <Button value={'LogIn'} loginHandle={loginFunction}/>
+          <Button value={'LogIn'} eventHandle={loginFunction}/>
           <Link to='/register' className={classes['register-link']}>Register</Link>
         </div>
       </div>
