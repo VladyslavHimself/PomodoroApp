@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import classes from './register.module.scss';
 import Header from "../Ui/Header/Header";
 import {Input} from "../Ui/Input/Input";
-import Button from "../Ui/Button/Button";
+import {Button} from "../Ui/Button/Button";
 
 type Props = {};
 

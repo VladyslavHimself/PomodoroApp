@@ -1,25 +1,60 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from "./login.module.scss";
 import Header from "../Ui/Header/Header";
 import {Input} from "../Ui/Input/Input";
-import Button from "../Ui/Button/Button";
+import {Button} from "../Ui/Button/Button";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import {apiKey} from "../../firebase-rest";
+import {IAuth} from "../../interfaces";
+import { useHistory } from 'react-router-dom';
+
+
+declare var window: any;
 
 function Login() {
-  const [authData, setAuthData] = useState({
+
+  const [authData, setAuthData] = useState<IAuth>({
     email: '',
     password: '',
   });
 
-  const loginFunction = async () => {
-    const response = await axios.post(apiKey, {
-      email: authData.email,
-      password: authData.password,
-      returnSecureToken: true,
-    });
+  const history = useHistory();
+
+
+
+  const getResponseFromServer = async () => {
+
+    try {
+      return await axios.post(apiKey, {
+        email: authData.email,
+        password: authData.password,
+        returnSecureToken: true,
+      });
+
+    } catch (e) {
+      return 400;
+    }
+
   }
+
+  const addUserToLocalStorage = (user: string) : void => {
+    localStorage.setItem('user', user);
+  }
+
+  const loginFunction = async () => {
+    const response = await getResponseFromServer();
+
+    if (response === 400) {
+      alert('Invalid login, or password');
+    } else if (response.status === 200) {
+      addUserToLocalStorage(authData.email);
+      console.log(localStorage.getItem('user'));
+      location.replace('/pomodoro');
+    }
+  }
+
+
 
   return (
     <div className={classes.login}>
@@ -30,7 +65,6 @@ function Login() {
           <Input authType='password' inputType={'password'} placeholder={'Password'} inputData={authData} changeInputData={setAuthData}/>
         </div>
         <div className={classes.buttons}>
-
           <Button value={'LogIn'} loginHandle={loginFunction}/>
           <Link to='/register' className={classes['register-link']}>Register</Link>
         </div>
