@@ -2,13 +2,12 @@ import React from 'react';
 import classes from './Button.module.scss';
 
 type Props = {
-  value: string
-}
+  value: string,
+  eventHandle?: React.MouseEventHandler<HTMLButtonElement>,
+};
 
-function Button(props: Props) {
+export function Button(props: Props) {
   return (
-    <button className={classes.button}>{props.value}</button>
+    <button className={classes.button} onClick={props.eventHandle}>{props.value}</button>
   );
 }
-
-export default Button;

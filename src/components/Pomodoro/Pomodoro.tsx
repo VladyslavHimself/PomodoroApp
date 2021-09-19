@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import classes from "./pomodoro.module.scss";
 import Header from "../Ui/Header/Header";
-import Button from "../Ui/Button/Button";
+import {Button} from "../Ui/Button/Button";
 
 import statistics from '../../assets/statistics.svg';
 
